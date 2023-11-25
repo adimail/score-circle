@@ -1,0 +1,16 @@
+{
+  "name": "score-circle",
+  "version": "1.0.0",
+  "description": "backend for score-circle",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Aditya Godse",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

@@ -1,0 +1,6 @@
+.form-box{
+    height: 400px;
+    /* background-color: beige; */
+    border: 3px solid rgb(157, 109, 21);
+    border-radius: 21px;
+}
