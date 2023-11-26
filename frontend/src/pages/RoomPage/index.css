@@ -1,7 +1,8 @@
-.canvas-box{
-    height: 450px;
+.canvas-box {
+    height: 75vh;
+    width: 75vw;
 }
 
-.span{
+.span {
     font-size: small;
 }
