@@ -3,7 +3,7 @@ import rough from "roughjs"
 
 const roughGenerator = rough.generator()
 
-const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color}) => {
+const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color, user }) => {
 
     const [isDrawing, setIsDrawing] = useState(false)
 
@@ -24,6 +24,10 @@ const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color}) =>
     }, [])
 
     useEffect(() => {
+
+    })
+
+    useEffect(() => {
         ctxRef.current.strokeStyle = color;
 
     }, [color])
@@ -31,11 +35,11 @@ const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color}) =>
     useLayoutEffect(() => {
         const roughCanvas = rough.canvas(canvasRef.current)
 
-        if(elements.length > 0){
+        if (elements.length > 0) {
             ctxRef.current.clearRect(
                 0,
                 0,
-                canvasRef.current.width, 
+                canvasRef.current.width,
                 canvasRef.current.width)
         }
 
@@ -184,6 +188,16 @@ const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color}) =>
         setIsDrawing(false)
     }
 
+    // if (user?.presenter) {
+    //     return (
+    //         <div className="border border-dark border-3 h-100 w-100 overflow-hidden">
+    //             <img src="" alt="Real time whiteboard Image" className="w-100 h-100" />
+    //         </div>
+
+    //     )
+    // }
+
+
     return (
 
         <div
@@ -195,6 +209,7 @@ const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color}) =>
         </div>
 
     )
+
 }
 
 export default WhiteBoard;
